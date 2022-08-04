@@ -1,0 +1,58 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
+    depends_on:
+      - redis
+      - db
+    restart: on-failure
+
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      - POSTGRES_DB=${SUPPORT_DB_NAME}
+      - POSTGRES_USER=${SUPPORT_DB_USER}
+      - POSTGRES_PASSWORD=${SUPPORT_DB_PASSWORD}
+    volumes:
+      - postgresdata:/var/lib/postgresql  
+
+  redis:
+    image: redis:6.2-alpine
+    ports:
+      - 6379:6379
+    restart: always
+    volumes:
+      - redisdata:/data
+
+  smtp4dev:
+    image: rnwood/smtp4dev
+    ports:
+      - '5000:80'
+      - '25:25'      
+    restart: always
+    volumes:
+      - smtp4dev-data:/smtp4dev
+    environment:
+      - ServerOptions__HostName=smtp4dev
+
+  celery:
+    build: .
+    command: celery -A supportapp worker --loglevel=info
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
+
+volumes:
+  postgresdata:
+  redisdata:
+  smtp4dev-data:    

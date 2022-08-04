@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+psycopg2 = "*"
+djangorestframework = "*"
+drf-nested-routers = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
+redis = "*"
+celery = "*"
+isort = "*"
+pytest-django = "*"
+python-dotenv = "*"
+
+[dev-packages]
+flake8 = "*"
+pytest = "*"
+pytest-django = "*"
+
+[requires]
+python_version = "3.10"
