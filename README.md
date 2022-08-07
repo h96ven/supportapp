@@ -17,6 +17,7 @@ Make sure pip and pipenv are installed.
 Install all project dependencies by running: pipenv install.
 
 The web server can be accessed via address: localhost:8000
+
 The fake smtp server can be accessed via: localhost:5000
 
 To access any info, one must be authenticated.
