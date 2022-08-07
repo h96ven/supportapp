@@ -33,7 +33,7 @@ Now you can access the list of created topics (if it's not empty): http://localh
   
 You can create a topic to ask questions for the support team to answer to. In order to do that, fill the ‘topic’ and ‘message’ fields. Press the POST button.
   
-After the support team sent a reply for the topic, you can see it in the nested “replies” field at /support/tickets/ or in a detailed view, for example, /support/tickets/9/ .
+After the support team sends a reply for the topic, you can see it in the nested “replies” field at /support/tickets/ or in a detailed view, for example, /support/tickets/9/ .
   
 In order to create a new reply, you must access the list of replies by using a nested url. For example: /support/tickets/9/replies/ . Where 9 is a ticket id. Now you can type a reply message by filling the ‘text’ field below and pressing the POST button.
   
