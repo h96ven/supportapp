@@ -58,9 +58,13 @@ To achieve that you can try to use django’s loaddata command for auth table: d
 If you have difficulties with that, you can add users manually, instead. My database has 5 users:
   
 user id 1: admin, password: admin, email: admin@admin.com
+
 user id 2: user1, password: ILoveDjango, email: user1@domain.com
+
 user id 3: support, password: ILoveDjango
+
 user id 4: user2, password: ILoveDjango, email: user2@domain.com
+
 user id 5: user3, password: ILoveDjango, email: user3@domain.com
   
 To create the admin user, run: docker-compose run web python manage.py createsuperuser
