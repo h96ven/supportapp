@@ -27,7 +27,7 @@ In order to create a user, fill the forms here: http://localhost:8000/auth/users
 
 In order to log in, fill the forms here: http://localhost:8000/auth/jwt/create 
 
-To emulate that the user is logged in, use the access token in ModHeader Chrome extension (for example): select 'Authorization', in the token field please type "JWT <your access token>" (use your token code instead of '<your access token>' words).
+To emulate that the user is logged in, use the access token in ModHeader Chrome extension (for example): select 'Authorization', in the token field please type "JWT [your access token]" (use your token code instead of '[your access token]' words).
   
 Now you can access the list of created topics (if it's not empty): http://localhost:8000/support/tickets/
   
