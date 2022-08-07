@@ -78,6 +78,8 @@ To create the support user, use the admin panel. Give him the staff status by ti
 Please, create the 5 users in the respective order to get the right user ids (admin, user1, support, user2, user3).
   
 Now run again: docker-compose run web python manage.py loaddata support.json . It has to be successful this time.
+
+The database is populated, at last! 
   
 Now, try the functionality. Create a topic, write a reply for it as the admin. Read the reply as a user and create a new reply. Change the status to Solved or Frozen as the admin. Check if an email message was sent: http://localhost:5000/ .
   
