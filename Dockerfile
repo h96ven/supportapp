@@ -3,7 +3,7 @@ FROM python:3.10
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
-# Required to install mysqlclient with Pip
+# Required to install postgresql with Pip
 RUN apt-get update && apt-get install \
   python3-dev postgresql postgresql-client gcc -y
 
