@@ -5,13 +5,13 @@ from .models import Reply, Ticket
 
 @admin.register(Ticket)
 class TicketAdmin(admin.ModelAdmin):
-    actions = ['batch_set_status_to_solved']
-    list_display = ['topic', 'updated_at', 'status', 'user']
-    list_editable = ['status']
-    list_filter = ['user', 'updated_at', 'status']
+    actions = ('batch_set_status_to_solved',)
+    list_display = ('topic', 'updated_at', 'status', 'user')
+    list_editable = ('status',)
+    list_filter = ('user', 'updated_at', 'status')
     list_per_page = 10
-    search_fields = ['topic__istartswith']
-    readonly_fields = ['user']
+    search_fields = ('topic__istartswith',)
+    readonly_fields = ('user',)
 
     # Adding an action for setting status of multiple entries to Solved
     @admin.action(description='Set status to Solved')
@@ -25,9 +25,9 @@ class TicketAdmin(admin.ModelAdmin):
 
 @admin.register(Reply)
 class ReplyAdmin(admin.ModelAdmin):
-    list_display = ['ticket', 'text', 'date']
+    list_display = ('ticket', 'text', 'date')
     list_per_page = 10
-    readonly_fields = ['user']
+    readonly_fields = ('user',)
 
     # Auto populating user field with current user
     def save_model(self, request, obj, form, change):

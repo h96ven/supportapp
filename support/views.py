@@ -9,7 +9,7 @@ from .serializers import ReplySerializer, TicketSerializer
 
 class TicketViewSet(CreateModelMixin, ReadOnlyModelViewSet):
     serializer_class = TicketSerializer
-    permission_classes = [IsAuthenticated, IsOwner]
+    permission_classes = (IsAuthenticated, IsOwner)
 
     # Giving the current user permissions to see list view of
     # only the objects he owns.

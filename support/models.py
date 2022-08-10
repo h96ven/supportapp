@@ -7,11 +7,11 @@ class Ticket(models.Model):
     STATUS_FROZEN = 'F'
     STATUS_SOLVED = 'S'
 
-    STATUS_CHOICES = [
+    STATUS_CHOICES = (
         (STATUS_UNSOLVED, 'Unsolved'),
         (STATUS_FROZEN, 'Frozen'),
         (STATUS_SOLVED, 'Solved'),
-    ]
+    )
     topic = models.CharField(max_length=255)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -25,7 +25,7 @@ class Ticket(models.Model):
         return self.topic
 
     class Meta:
-        ordering = ['-updated_at']
+        ordering = ('-updated_at',)
 
 
 class Reply(models.Model):
