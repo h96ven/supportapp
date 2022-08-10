@@ -10,9 +10,10 @@ from support.models import Ticket
 def update_status(sender, instance, created, **kwargs):
     if not created:
         if instance.status == 'S' or instance.status == 'F':
-            send_mail(
-                'New status!',
-                'The status of the topic you created has been changed.',
-                'noreply@email.com',
-                [instance.user.email]
-            )
+            # send_mail(
+            #     'New status!',
+            #     'The status of the topic you created has been changed.',
+            #     'noreply@email.com',
+            #     [instance.user.email]
+            # )
+            pass

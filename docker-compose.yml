@@ -33,17 +33,6 @@ services:
     volumes:
       - redisdata:/data
 
-  smtp4dev:
-    image: rnwood/smtp4dev
-    ports:
-      - '5000:80'
-      - '25:25'      
-    restart: always
-    volumes:
-      - smtp4dev-data:/smtp4dev
-    environment:
-      - ServerOptions__HostName=smtp4dev
-
   celery:
     build: .
     command: celery -A supportapp worker --loglevel=info
@@ -54,5 +43,4 @@ services:
 
 volumes:
   postgresdata:
-  redisdata:
-  smtp4dev-data:    
+  redisdata:  
