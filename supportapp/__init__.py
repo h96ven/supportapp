@@ -1,1 +1,1 @@
-from .celery import celery
+from supportapp.celery import celery

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Reply, Ticket
+from support.models import Reply, Ticket
 
 
 @admin.register(Ticket)

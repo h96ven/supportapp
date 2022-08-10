@@ -2,9 +2,9 @@ from rest_framework.mixins import CreateModelMixin
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
-from .models import Reply, Ticket
-from .permissions import IsOwner
-from .serializers import ReplySerializer, TicketSerializer
+from support.models import Reply, Ticket
+from support.permissions import IsOwner
+from support.serializers import ReplySerializer, TicketSerializer
 
 
 class TicketViewSet(CreateModelMixin, ReadOnlyModelViewSet):
