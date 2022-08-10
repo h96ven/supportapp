@@ -34,7 +34,7 @@ services:
       - redisdata:/data
 
   smtp4dev:
-    image: rnwood/smtp4dev:3.2.0
+    image: rnwood/smtp4dev
     ports:
       - '5000:80'
       - '25:25'      

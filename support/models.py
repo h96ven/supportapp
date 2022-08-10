@@ -1,23 +1,21 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Ticket(models.Model):
-    STATUS_UNSOLVED = 'U'
-    STATUS_FROZEN = 'F'
-    STATUS_SOLVED = 'S'
+    class TicketStatus(models.TextChoices):
+        STATUS_UNSOLVED = 'U', _('Unsolved')
+        STATUS_FROZEN = 'F', _('Frozen')
+        STATUS_SOLVED = 'S', _('Solved')
 
-    STATUS_CHOICES = (
-        (STATUS_UNSOLVED, 'Unsolved'),
-        (STATUS_FROZEN, 'Frozen'),
-        (STATUS_SOLVED, 'Solved'),
-    )
     topic = models.CharField(max_length=255)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(
-        max_length=1, choices=STATUS_CHOICES, default=STATUS_UNSOLVED)
+        max_length=1, choices=TicketStatus.choices,
+        default=TicketStatus.STATUS_UNSOLVED)
     user = models.ForeignKey(
                 User, on_delete=models.SET_NULL, null=True)
 
