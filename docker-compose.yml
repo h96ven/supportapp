@@ -14,7 +14,7 @@ services:
     restart: on-failure
 
   db:
-    image: postgres
+    image: postgres:12.11
     ports:
       - 5432:5432
     restart: always
@@ -34,7 +34,7 @@ services:
       - redisdata:/data
 
   smtp4dev:
-    image: rnwood/smtp4dev
+    image: rnwood/smtp4dev:3.2.0
     ports:
       - '5000:80'
       - '25:25'      
