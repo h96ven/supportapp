@@ -41,6 +41,16 @@ services:
     volumes:
       - .:/app
 
+  tests:
+    build: .
+    command: ./wait-for-it.sh db:5432 -- ptw
+    depends_on:
+      - redis
+      - db
+    tty: true
+    volumes:
+      - .:/app
+
 volumes:
   postgresdata:
   redisdata:  
