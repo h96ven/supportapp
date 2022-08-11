@@ -1,4 +1,4 @@
-# supportapp
+# Supportapp
 
 It's a backend REST API for operating of a support team service. A user creates a topic with his question. The support team member or admin can see it and answer it. The user can see the reply and reply again, the admin can answer again. And so on. The admin can change the status of the topic. When the status changes, the user receives an email notification. In order to see anything or to create a topic a user must by authenticated. The user only sees the list of topics he created and the replies to them. 
 
@@ -33,7 +33,7 @@ To emulate that the user is logged in, use the access token in ModHeader Chrome 
   
 Now you can access the list of created topics (if it's not empty): http://localhost:8000/support/tickets/
 
-### Using the supportapp API
+### Using the Supportapp API
 
 You can create a topic to ask questions for the support team to answer to. In order to do that, fill the ‘topic’ and ‘message’ fields. Press the POST button.
   
