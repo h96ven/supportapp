@@ -5,7 +5,8 @@ It's a backend REST API for operating of a support team service. A user creates 
 ## Technologies:
 Django Rest Framework, JWT-authorization, Djoser, PostgreSQL, Docker, Celery, Redis etc.
 
-## Code-style: flake8, isort.
+## Code-style: 
+flake8, isort.
 
 ## Used techniques:
 Class-based views, Mixins, Nested routers, Signals etc.
