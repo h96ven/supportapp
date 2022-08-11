@@ -2,19 +2,19 @@
 
 It's a backend REST API for operating of a support team service. A user creates a topic with his question. The support team member or admin can see it and answer it. The user can see the reply and reply again, the admin can answer again. And so on. The admin can change the status of the topic. When the status changes, the user receives an email notification. In order to see anything or to create a topic a user must by authenticated. The user only sees the list of topics he created and the replies to them. 
 
-## Technologies:
+### Technologies:
 Django Rest Framework, JWT-authorization, Djoser, PostgreSQL, Docker, Celery, Redis etc.
 
-## Code-style: 
+### Code-style: 
 flake8, isort.
 
-## Used techniques:
+### Used techniques:
 Class-based views, Mixins, Nested routers, Signals etc.
 
-## How to assemble
+### How to assemble
 One can assemble this project using Docker-compose. Python 3.10 was used. If you have problems installing pip and pipenv for Python 3.10 on WSL Ubuntu, you can manually set the version of Python to 3.8 in Dockerfile and Pipfile. If you have problems installing psycopg2, you can replace psycopg2 for psycopg2-binary in Pipfile.
 
-## To install:
+### To install:
 
 Make sure pip and pipenv are installed.
 Install all project dependencies by running: pipenv install.
@@ -23,7 +23,7 @@ The web server can be accessed via address: localhost:8000
 
 To access any data, one must be authenticated.
 
-## Registering and logging in 
+### Registering and logging in 
 
 In order to register a user, fill the forms here: http://localhost:8000/auth/users/ 
 
@@ -33,7 +33,7 @@ To emulate that the user is logged in, use the access token in ModHeader Chrome 
   
 Now you can access the list of created topics (if it's not empty): http://localhost:8000/support/tickets/
 
-## Using the supportapp API
+### Using the supportapp API
 
 You can create a topic to ask questions for the support team to answer to. In order to do that, fill the ‘topic’ and ‘message’ fields. Press the POST button.
   
@@ -49,7 +49,7 @@ You can use an empty database and fill it yourself to try this app’s functiona
   
 Or you can populate it with my database.
 
-## Populating the database
+### Populating the database
   
 For that, you have auth_populate_database.json and support_populate_database.json files in the db_populate directory of this project.
   
@@ -65,7 +65,7 @@ Now you can access the admin panel: http://localhost:8000/admin/
   
 You can create regular users at: http://localhost:8000/auth/users/
   
-## Trying the functionality
+### Trying the functionality
   
 Now, try the functionality. Create a topic, write a reply for it as the admin. Read the reply as a user and create a new reply. Change the status to Solved or Frozen as the admin. 
   
