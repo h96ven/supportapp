@@ -77,8 +77,8 @@ DATABASES = {
         'NAME': os.getenv("SUPPORT_DB_NAME"),
         'USER': os.getenv("SUPPORT_DB_USER"),
         'PASSWORD': os.getenv("SUPPORT_DB_PASSWORD"),
-        'HOST': 'db',
-        'PORT': '5432',
+        'HOST': os.getenv("SUPPORT_DB_HOST"),
+        'PORT': os.getenv("SUPPORT_DB_PORT"),
     }
 }
 
@@ -143,7 +143,7 @@ SIMPLE_JWT = {
    'ACCESS_TOKEN_LIFETIME': timedelta(days=1)
 }
 
-CELERY_BROKER_URL = 'redis://redis:6379/1'
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER")
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
