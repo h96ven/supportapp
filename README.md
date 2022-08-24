@@ -67,7 +67,7 @@ You can create regular users at: http://localhost:8000/auth/users/
   
 ### Trying the functionality
   
-Now, try the functionality. Create a topic, write a reply for it as the admin. Read the reply as a user and create a new reply. Change the status to Solved or Frozen as the admin. 
+Now, try the functionality. Create a topic, write a reply for it as the admin. Read the reply as a user and create a new reply. Change the status to Solved or Frozen as the admin and check if the email notification was sent: http://localhost:5000 . 
   
 When you are done, don’t forget to untick Authentication in ModHeader Chrome extension. Otherwise, all your login information on all other websites would be messed up and you won’t be able to login there.
 
