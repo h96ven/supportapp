@@ -11,6 +11,9 @@ flake8, isort.
 ### Used techniques:
 Class-based views, Mixins, Nested routers, Signals etc.
 
+### Testing:
+There are several tests written in Pytest
+
 ### How to assemble
 One can assemble this project using Docker-compose. Python 3.10 was used. If you have problems installing pip and pipenv for Python 3.10 on WSL Ubuntu, you can manually set the version of Python to 3.8 in Dockerfile and Pipfile. If you have problems installing psycopg2, you can replace psycopg2 for psycopg2-binary in Pipfile.
 
