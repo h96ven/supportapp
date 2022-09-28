@@ -3,7 +3,7 @@
 It's a backend for a RESTful API for operating of a support team service. A user creates a topic with his question. The support team member or admin can see it and answer it. The user can see the reply and reply again, the admin can answer again. And so on. The admin can change the status of the topic. When the status changes, the user receives an email notification. In order to see anything or to create a topic a user must by authenticated. The user only sees the list of topics he created and the replies to them. 
 
 ### Technologies:
-Django Rest Framework, JWT-authorization, Djoser, PostgreSQL, Docker, Celery, Redis etc.
+Django Rest Framework, JWT-authorization, Djoser, PostgreSQL, Docker, Celery, Redis, Linux Ubuntu etc.
 
 ### Code-style: 
 flake8, isort.
